@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container {
+  padding: 2em;
+  background-color: black;
+  color: white;
+}
+
+.media,
+.guide {
+  display: none;
+}
+
+.position {
+  position: sticky;
+  top: 10px;
+  left: 10px;
+}
+
+.fixed-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+  text-transform: uppercase;
+}
+a:hover {
+  color: white;
+  cursor: pointer;
+}
+.header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+.profile-image {
+  background-size: cover;
+  max-width: 100%;
+}
+
+.introduction {
+  text-align: start;
+}
+
+.introduction h2 {
+  border-bottom-style: solid;
+  padding: 1em 0;
+}
+.introduction p,
+.skills h5 {
+  color: lightgrey;
+}
+
+.skill {
+  width: 100%;
+  height: 1.7em;
+  background-color: white;
+}
+
+.bar {
+  height: 1.7em;
+  background-color: gray;
+}
+
+.bar1 {
+  width: 95%;
+}
+.bar2 {
+  width: 85%;
+}
+.bar3 {
+  width: 75%;
+}
+.achievements {
+  margin: 3em 0 2em 0;
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.edit {
+  margin-bottom: -1rem;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+.resume,
+.send-m {
+  background-color: lightgray;
+  color: black;
+  padding: 1.5em 2.5em;
+  font-size: 1em;
+  background-image: url(images/LogoMakr-57zEi0.png);
+  background-position: 5%;
+  background-size: 15%;
+  background-repeat: no-repeat;
+  border: none;
+  text-align: center;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-pro {
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.h3 {
+  background-color: rgba(3, 1, 1, 0.7);
+  padding: 1em;
+  color: grey;
+  font-size: 1.5em;
+}
+
+.basic-pro p {
+  padding: 1em;
+  border-bottom-style: solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+}
+.dollar {
+  display: block;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.basic-pro button {
+  margin: 1.5em;
+  padding: 1.5em 2em;
+  font-weight: 500;
+  background-color: grey;
+  border: none;
+}
+
+.basic-pro:hover {
+  background-color: white;
+}
+
+.reviews p {
+  color: lightgray;
+  margin-left: 1em;
+}
+.users {
+  display: flex;
+}
+
+.users img {
+  border-radius: 50%;
+  max-width: 80px;
+  margin: 1em;
+}
+.sub {
+  font-size: 0.9em;
+}
+.photos h2,
+.contact h2 {
+  border-bottom-style: solid;
+  padding: 1em 0;
+}
+.images-align img {
+  max-width: 100%;
+  height: auto;
+}
+
+.details {
+  display: flex;
+}
+
+.details img {
+  max-width: 100%;
+  margin: 1em;
+}
+
+.enter {
+  margin-top: 1em;
+  padding: 1em 0 1em 0;
+  width: 100%;
+}
+.send-m {
+  margin-top: 1em;
+  text-transform: uppercase;
+  background-image: url(images/LogoMakr-3udeJi.png);
+  background-position: 5%;
+  background-size: 15%;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  filter: invert(100%);
+  max-width: 5%;
+}
+.logos {
+  display: flex;
+  margin-top: 2em;
+}
+
+/* Media Queries */
+
+@media all and (min-width: 600px) {
+  .res {
+    display: none;
+  }
+  .position {
+    display: none;
+  }
+
+  .main-container {
+    padding-left: 12em;
+    padding-right: 2em;
+  }
+
+  .media,
+  .guide {
+    display: block;
+  }
+  .guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100px;
+    height: 100%;
+    z-index: 2;
+
+    background-color: #222222;
+  }
+  .guide img {
+    max-width: 100%;
+  }
+  #opac {
+    opacity: 0.7;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .panel a {
+    text-align: center;
+  }
+  .panel:hover,
+  .panel:focus,
+  .panel:active {
+    background-color: black;
+  }
+  .pricing {
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .basic-pro {
+    margin: 1em;
+    flex: 1;
+  }
+
+  .images-align {
+    line-height: 1;
+
+    column-count: 2;
+    column-gap: 10px;
+  }
+
+  .images-align img {
+    /* Just in case there are inline attributes */
+    width: 100%;
+    height: auto;
+  }
+}
